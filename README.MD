@@ -9,7 +9,7 @@ Can be used to cache some settings between device reboots to speedup its startup
 ### Usage:
  * Declare static variable and put it into the separate segment (`.static`):
  ```
- #[link_section = ".state"]
+ #[link_section = ".static"]
  static mut COUNTER_STORAGE: StaticStorage<u32> = StaticStorage::<u32>::empty();
  ```
 
