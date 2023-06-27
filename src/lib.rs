@@ -42,7 +42,7 @@ impl<T> StaticStorage<T> {
         mask == Self::INIT_MASK
     }
 
-    pub fn set_init(&mut self) {
+    fn set_init(&mut self) {
         unsafe { core::ptr::write_volatile(&mut self.mask, Self::INIT_MASK) };
     }
 }
